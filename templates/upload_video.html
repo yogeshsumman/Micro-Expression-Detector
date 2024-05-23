@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing</title>
+    <link rel="stylesheet" href="../static/Css/upload_video.css">
+    <script>
+      if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+      }
+  </script>
+    <script>
+      var timeout;
+    
+      function startTimer() {
+        // Clears the existing timer if there is one
+        clearTimeout(timeout);
+    
+        // Set timeout for 30 minutes (1800000 milliseconds)
+        timeout = setTimeout(function() {
+          alert('Your session has expired due to inactivity.');
+          window.location.href = '/logout';  // Redirect to the logout route
+        }, 1000000);  // 10 seconds
+      }
+    
+      // Resets the timer on any activity
+      window.onload = startTimer;
+      window.onmousemove = startTimer;
+      window.onmousedown = startTimer;  // Catches touchscreen presses
+      window.ontouchstart = startTimer;
+      window.onclick = startTimer;      // Catches touchpad clicks
+      window.onkeydown = startTimer;
+      window.addEventListener('scroll', startTimer, true);  // Improved; catches scrolling
+    </script>
+    <script src="{{ url_for('static', filename='Js/index.js') }}"></script>
+</head>
+<body>
+
+<div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading">Upload Video</div>
+        <div class="panel-body">
+
+          <!-- Standar Form -->
+          <h4>Select a video from your computer</h4>
+          <img src="../static/images/uploadIcon.png" id="upload-icon" alt="">
+          <form action="/upload_video" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="video" id="js-upload-files" >
+              </div>
+              <input type="submit" value="Upload" class="upload-btn" id="js-upload-submit">
+            </div>
+          </form>
+
+        </div>
+      </div>
+</div>
+</body>
+</html>

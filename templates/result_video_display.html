@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Video</title>
+    <link rel="stylesheet" href="../static/Css/result_video_display.css" />
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- <h1>Processed Video</h1> -->
+
+    <video width="640" height="480" controls>
+        <source src="../static/processed_video/aaa{{processed_video}}" type="video/mp4">
+    </video>
+
+   
+
+</body>
+</html>

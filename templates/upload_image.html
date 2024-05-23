@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/index.css') }}">
+    <script src="{{ url_for('static', filename='Js/index.js') }}"></script>
+</head>
+<body>
+    <h1>Image Processing</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/upload_image" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept=".png, .jpg, .jpeg, .gif" required>
+        <button type="submit">Upload</button>
+    </form>
+    
+
+        <!-- {% if processed_image %} -->
+        <img src="{{processed_image}}" alt="">
+            <!-- <h2>Processed Image:</h2> -->
+        <!-- {% endif %} -->
+</body>
+</html>

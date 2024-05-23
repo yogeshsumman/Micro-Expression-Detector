@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/de78888db2.js" crossorigin="anonymous"></script>
+    <script>
+      if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+      }
+  </script>
+  <script>
+    var timeout;
+  
+    function startTimer() {
+      // Clears the existing timer if there is one
+      clearTimeout(timeout);
+  
+      // Set timeout for 30 minutes (1800000 milliseconds)
+      timeout = setTimeout(function() {
+        alert('Your session has expired due to inactivity.');
+        window.location.href = '/logout';  // Redirect to the logout route
+      }, 1000000);  // 10 seconds
+    }
+  
+    // Resets the timer on any activity
+    window.onload = startTimer;
+    window.onmousemove = startTimer;
+    window.onmousedown = startTimer;  // Catches touchscreen presses
+    window.ontouchstart = startTimer;
+    window.onclick = startTimer;      // Catches touchpad clicks
+    window.onkeydown = startTimer;
+    window.addEventListener('scroll', startTimer, true);  // Improved; catches scrolling
+  </script>
+    <link rel="stylesheet" href="../static/Css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="main">
+    
+      
+      <div class="content">
+        <div class="background-img">
+        <video
+        class="video"
+          autoplay
+          muted
+          loop
+          width="100vw"
+        >
+          <source
+            src="/static/images/Untitled video - Made with Clipchamp.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+          <i class="fa-solid fa-user" id="user"><span style="margin-left: 10px;">Welcome {{ user.name }}</span></i>
+        <ul>
+          <!-- <div class="logo">Logo</div> -->
+          <li>Home</li>
+          <li>Showcase</li>
+          <li>About Us</li> 
+          <li>Scenarios</li>
+          <li>Resources</li>
+          <form action="/logout" method="post">
+            <button type="submit" id="logout">Logout</button>
+        </form>
+        </ul>
+      </nav>
+      <!-- Top div infont of the video -->
+        <div class="content-text">
+          <h1 class="head anim">MicroSense:<strong>The MicroExpression</strong> Detector</h1>
+          <h3 class="para-top anim">
+            Available for <strong>Free Minimal Environmental Impact </strong>Commitment to
+            Privacy
+          </h3>
+          <p class="p-top anim">
+            We expertly deliver <strong>safe browser-based AI </strong>solutions to analyze
+            facial Micro expressions improving digital experiences through a
+            <strong>data-driven empathetic approach</strong>
+          </p>
+        </div>
+        </div>
+        <div class="home-product">
+          <!-- Box with the button to go to the facial detection page -->
+        <div class="emotion-al-container hidden-left">
+          <h2 class="emotion-al-title">MicroSense Demo</h2>
+          <p class="emotion-al-text">Experience the MicoSense difference: Click the button to test our MicoSense Model</p>
+          <!-- <a class="emotion-al-button" href="#">Discover more</a> -->
+          <form class="emotion-al-button" action="/video_upload"  method="POST">
+            <button type="submit">
+                upload video
+            </button>
+          </form>
+      </div>
+
+      <!-- <form class="emotion-al-button" action="/video_upload"  method="POST">
+        <button type="submit">
+            upload video
+        </button>
+      </form> -->
+
+
+      <!-- the upper para with the cool image -->
+      <div class="content-defination hidden-right">
+        <div class="text">
+        <h2>What are MicroExpression and Facial MicroExpression Detection?</h2>
+        <p>Micro-expression AI, also known as Subtle Emotion Detection, is the field of computer science that enables computers to recognize, interpret, and simulate fleeting and subtle facial expressions that are unique to each  individual</p>
+        <p>Micro-Expression Recognition (MER) is a subfield of Emotion AI that focuses on detecting micro-expressions, which are brief, involuntary facial movements that betray concealed emotions.</p> 
+        <p>Micro-Expression AI can be used to develop applications and services that interact with users in a more nuanced and perceptive manner, based on the detection of their subtle emotional cues and micro-expressions.</p>
+      </div>
+      <div class="content-defination-image"></div>
+        <img src="../static/images/facial-recognition.jpg" alt="">
+      </div>
+
+
+      <!-- the lower para with the cool image -->
+      <div class="content-emotion-al-demo hidden-left">
+        <div class="content-emotion-image"></div>
+        <img src="../static/images/Emotion AI.webp " alt="">
+        <div class="text">
+        <h2>Empowering digital interactions with MicroSense</h2>
+        <p>Embark on a transformative journey where digital encounters respond seamlessly to your emotions. MicroSense, powered by cutting-edge Micro-Expression Detection technology, translates subtle facial cues into bespoke content and features. By analyzing fleeting micro-expressions, gain invaluable insights into user preferences, deliver tailored recommendations, and offer empathetic support</p>
+
+          <p>MicroSense  AI, boasting  micro-expression detections, unlocks the potential for captivating, lifelike interactions across various sectors.</p>
+          
+          <!-- <p>Join us on a journey of personalized, adaptive, and emotionally empowering digital experiences. Try our demo now and witness the game-changing impact of Affective Computing!</p> -->
+          <!-- <a class="emotion-al-demo" href="#">Emotion al demo</a> -->
+          <!-- <a class="Scenarios" href="#">Scenario</a> -->
+        </div>
+      </div>
+    </div>
+
+
+<!-- Footer -->
+	
+ 
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>MicroSense</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Free Trial</a></li>
+          <!-- <li><a href="#">returns</a></li> -->
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">Model</a></li>
+          <li><a href="#">AI</a></li>
+          <li><a href="#">Computer Vision</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+	<!-- ./Footer -->
+  </div>
+    <script src="../static/Js/index.js" defer></script>
+    
+  </body>
+</html>

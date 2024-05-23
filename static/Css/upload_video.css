@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+} */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    margin: 0;
+    background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+    /* background-image: url(img/G2CM_FI454_Learn_Article_Images_[Facial_recognition]_V1a-1.webp);
+    background-size:cover; */
+
+}
+video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* .container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000065;
+} */
+
+.upload{
+    border: 2px solid black;
+    padding: .5rem;
+    font-size: large;
+}
+
+.upload-btn{
+  background-color: #a9b8f4;
+  color: #2c67c6;
+  border: none;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 8px;
+  width: 25rem;
+  height: 45px;
+  transition: .3s;
+  margin-block: 1.5rem;
+  /* float: right; */
+  /* margin: 12px; */
+}
+
+.upload-btn:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+  }
+  
+
+   /* layout.css Style */
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+  }
+  
+  /* skin.css Style*/
+  .upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+  }
+  .upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+  }
+
+  .container{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    width: 30rem;
+    text-align: center;
+  }
+
+  #upload-icon{
+    height: 10rem;
+    margin: 2rem;
+    opacity: 0.8;
+  }
+
+  .panel{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    /* padding-block: 1rem; */
+  }
+
+  .panel-heading{
+    border-bottom: 1px solid rgb(98, 97, 97);
+    padding-block: 8px;
+    background-color: #a9b8f4;
+    font-weight: 600;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .panel-body{
+    padding-block: 10px;
+  }
+
+  #js-upload-files {
+    margin-left: 60px;
+  }
+
+  #js-upload-files::file-selector-button {
+    font-weight: bold;
+    background-color: #c7cceb;
+    padding: 0.5em;
+    border: none;
+    border-radius: 3px;
+    padding-inline: 16px;
+  }
+
+  #upload-icon {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
