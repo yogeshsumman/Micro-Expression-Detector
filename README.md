@@ -44,11 +44,11 @@ MicroSense: The Micro Expression Detector is a deep learning-based project desig
 
 These enhancements aim to improve the utility, accessibility, and accuracy of the MicroSense project, making it a valuable resource for various fields.
 
-## Contributing
+<!-- ## Contributing
 We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this project.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. -->
 
 ## Contact
 If you have any questions or need further assistance, please contact our support team at yogeshsumman2001@gmail.com.
