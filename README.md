@@ -10,6 +10,20 @@ MicroSense: The Micro Expression Detector is a deep learning-based project desig
 - High accuracy in detecting subtle facial expressions.
 - User-friendly interface for video upload and analysis.
 
+
+## Demo
+### **Micro-Expression Detection in Action**
+<video width="600" controls>
+  <source src="assets/Example1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### **User Interface & Workflow**
+<video width="600" controls>
+  <source src="assets/path-to-second-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Installation
 1. *Clone the repository*
     ```python
@@ -51,4 +65,4 @@ If you have any questions or need further assistance, please contact our support
 
 *Server:* Flask, Sqlalchemy, Python
 
-*Object Detection:* YOLO 
+*Object Detection:* YOLO
