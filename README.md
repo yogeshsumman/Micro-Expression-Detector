@@ -16,7 +16,7 @@ MicroSense: The Micro Expression Detector is a deep learning-based project desig
 ![MicroSense Demo](assets/Demo1.gif)
 
 ### **User Interface & Workflow**
-![User Interface Demo](assets/user-interface-demo.gif)
+![User Interface Demo](assets/UI.gif)
 
 ## Installation
 1. *Clone the repository*
