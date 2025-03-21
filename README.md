@@ -13,16 +13,10 @@ MicroSense: The Micro Expression Detector is a deep learning-based project desig
 
 ## Demo
 ### **Micro-Expression Detection in Action**
-<video width="600" controls>
-  <source src="assets/Example1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![MicroSense Demo](assets/Demo.gif)
 
 ### **User Interface & Workflow**
-<video width="600" controls>
-  <source src="assets/path-to-second-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![User Interface Demo](assets/user-interface-demo.gif)
 
 ## Installation
 1. *Clone the repository*
